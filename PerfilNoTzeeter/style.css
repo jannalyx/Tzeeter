@@ -6,282 +6,120 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px;
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
     width: 100%;
-    max-width: 1200px;
 }
 
-.menu {
-    list-style: none;
-    padding: 0;
-}
-
-.menu a {
-    display: block;
-    padding: 12px 15px;
-    text-decoration: none;
+.login-container h2 {
+    margin-bottom: 20px;
     color: #333;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
     font-size: 16px;
-    border-radius: 8px;
 }
 
-.menu a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+.password-success {
+    display: none;
+    color: green;
+    font-size: 14px;
+    margin-top: -5px;
 }
 
-.menu i {
-    margin-right: 10px;
-}
-
-.profile-pic {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-}
-
-.nome-completo {
-    font-weight: bold;
-}
-
-.username {
-    color: gray;
+.email-error {
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-top: -5px;
 }
 
 button {
-    padding: 5px 12px;
+    padding: 12px 20px;
     border: none;
-    background-color: rgb(29, 155, 240);
+    background-color: #1d9cf0;
     color: white;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background-color: #007acc;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    display: block;
     font-size: 14px;
+    color: #1d9cf0;
+    text-decoration: none;
 }
 
-button:hover {
-    background-color: rgb(26, 140, 216);
-}
-
-.search {
-    background-color: rgb(239, 243, 244);
-    padding: 12px 15px;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    max-width: 100%;
-}
-
-.search-input {
-    border: none;
-    background: transparent;
-    outline: none;
-    padding: 6px 10px;
-    width: 100%;
-    font-size: 14px;
-}
-
-.suggestions {
-    background-color: rgb(239, 243, 244);
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.suggestion {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
-}
-
-.suggestion-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.follow-btn {
-    padding: 6px 12px;
-    border-radius: 20px;
-    background-color: #1D9BF0;
-    color: white;
-    cursor: pointer;
-    font-size: 13px;
-}
-
-.follow-btn:hover {
-    background-color: #1992D3;
-}
-
-.more-suggestions {
-    color: #1D9BF0;
+.forgot-password:hover {
     text-decoration: underline;
 }
 
-.more-suggestions:hover {
+.signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #1d9cf0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
     text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr 2fr;
+    .login-container {
+        width: 90%;
     }
-
-    .right-column {
-        display: none;
-    }
-
-    .menu a {
-        font-size: 18px;
-        padding: 10px 12px;
-    }
-
-    button {
-        font-size: 14px;
-    }
-
-    .menu a {
-        display: inline-block;
-    }
-
-    .menu li {
-        display: inline;
-    }
-
-    .tzeet {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 992px) {
-    .container {
-        grid-template-columns: 1fr 2fr;
-    }
-}
-
-.home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.user-photo {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.tzeet-input {
-  width: 100%;
-  height: 80px;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  resize: none;
-}
-
-.reply-section {
-  margin-top: 10px;
-}
-
-.reply-link {
-  text-decoration: none;
-  color: #1d9cf0;
-  display: flex;
-  align-items: center;
-}
-
-.reply-link:hover {
-  background-color: rgba(29, 155, 240, 0.1);
-  border-radius: 4px;
-}
-
-.reply-icon {
-  margin-right: 5px;
-}
-
-.multimedia-section {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.multimedia-icon {
-  width: 32px;
-  height: 32px;
-  background-color: transparent;
-  border-radius: 50%;
-}
-
-.multimedia-icon:hover {
-  background-color: rgba(29, 155, 240, 0.1);
-}
-
-.status-section {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.char-count {
-  color: rgb(0, 0, 0);
-}
-
-.separator {
-  margin: 0 10px;
-}
-
-.add-tzeet-link {
-  font-size: 20px;
-  color: #1d9cf0;
-  text-decoration: none;
-}
-
-.send-btn {
-  background-color: #1d9cf0;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.send-btn:disabled {
-  background-color: #ccc;
-}
-
-.send-btn:enabled {
-  background-color: #1d9cf0;
-}
-
-#open-modal-btn {
-  background-color: #1d9cf0;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-dialog {
-  border-radius: 10px;
-  padding: 20px;
-  width: 100%;
-  max-width: 500px;
-}
-
-#tzeet-modal {
-  display: none;
-}
-
-#tzeet-modal:show {
-  display: block;
 }
