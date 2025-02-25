@@ -1,0 +1,130 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+.nome-completo {
+    color: rgb(15, 20, 25);
+    font-weight: bold;
+}
+
+.username {
+    color: rgb(83, 100, 113);
+}
+
+.bio {
+    color: rgb(15, 20, 25);
+}
+
+.localizacao,
+.data-ingresso {
+    color: rgb(83, 100, 113);
+}
+
+.profile-pic {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(29, 155, 240);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(26, 140, 216);
+}
+
+.tzeet {
+    padding: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.tzeet:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.data-tzeet {
+    color: rgb(83, 100, 113);
+    font-size: 14px;
+}
+
+.conteudo-tzeet {
+    color: rgb(15, 20, 25);
+    font-size: 16px;
+}
+
+.menu a,
+.publicacoes a {
+    color: rgb(15, 20, 25);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.menu a:hover,
+.publicacoes a:hover {
+    background-color: rgba(15, 25, 20, 0.1);
+}
+
+.estatisticas a {
+    color: rgb(83, 100, 113);
+}
+
+.estatisticas a span {
+    color: rgb(15, 20, 25);
+    font-weight: bold;
+}
+
+.estatisticas a:hover {
+    text-decoration: underline;
+}
+
+.acoes a {
+    color: rgb(83, 100, 113);
+    padding: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.acoes a:hover {
+    background-color: rgba(83, 100, 113, 0.1);
+}
+
+.acoes .reply:hover,
+.acoes .share:hover {
+    background-color: rgba(29, 155, 240, 0.1);
+    color: rgba(29, 155, 240, 1);
+}
+
+.acoes .retweet:hover {
+    background-color: rgba(0, 186, 124, 0.1);
+    color: rgba(0, 186, 124, 1);
+}
+
+.acoes .like:hover {
+    background-color: rgba(249, 24, 128, 0.1);
+    color: rgba(249, 24, 128, 1);
+}
+
+.tzeet .nome-completo + .username {
+    font-size: 14px;
+}
+
+.tzeet p:first-child {
+    margin-bottom: 5px;
+}
+
+.tzeet:last-child {
+    border-bottom: none;
+}

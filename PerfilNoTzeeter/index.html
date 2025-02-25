@@ -4,28 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tzeeter Profile</title>
-    <!-- Link para o Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <style>
-        ul.menu {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul.menu li {
-            margin-bottom: 5px;
-        }
-        img.profile-pic {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-        }
-        button {
-            padding: 5px 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Menu de Navegação -->
     <ul class="menu">
         <li><a href="#"><i class="fa-solid fa-house"></i> Página Inicial</a></li>
         <li><a href="#"><i class="fa-solid fa-hashtag"></i> Explorar</a></li>
@@ -38,31 +20,25 @@
         <li><a href="#"><i class="fa-solid fa-ellipsis"></i> Mais</a></li>
     </ul>
 
-    <!-- Perfil do Usuário -->
     <img src="jana perfil.jpeg" alt="Foto de Janaina" class="profile-pic">
-    <h4>jana.</h4>
-    <h5>@jann4lyx</h5>
+    <h4 class="nome-completo">jana.</h4>
+    <h5 class="username">@jann4lyx</h5>
 
-    <!-- Botão Editar Perfil -->
     <button>Editar Perfil</button>
 
-    <!-- Descrição do Usuário -->
-    <p>estudante de sistemas de informação - UFC</p>
+    <p class="bio">estudante de sistemas de informação - UFC</p>
 
-    <!-- Informações de Localização e Data -->
     <ul>
-        <li><a href="#">Nascido em 4 de março de 2002</a></li>
-        <li><a href="#">Entrou em outubro de 2021</a></li>
+        <li class="localizacao"><a href="#">Nascido em 4 de março de 2002</a></li>
+        <li class="data-ingresso"><a href="#">Entrou em outubro de 2021</a></li>
     </ul>
 
-    <!-- Seguidores e Seguindo -->
-    <ul>
-        <li><a href="#">82 Seguindo</a></li>
-        <li><a href="#">27 Seguidores</a></li>
+    <ul class="estatisticas">
+        <li><a href="#"><span>82</span> Seguindo</a></li>
+        <li><a href="#"><span>27</span> Seguidores</a></li>
     </ul>
 
-    <!-- Links de Navegação de Tweets -->
-    <p>
+    <p class="publicacoes">
         <a href="#">Posts</a>
         <a href="#">Respostas</a>
         <a href="#">Destaques</a>
@@ -71,23 +47,21 @@
         <a href="#">Curtidas</a>
     </p>
 
-    <!-- Exemplo de Tzeet -->
-    <article>
+    <article class="tzeet">
         <img src="kirer perfil.jpeg" alt="Foto de Kirer" class="profile-pic">
-        <h4>kirer</h4>
-        <h6>@kirerlol · 9 de jan</h6>
-        <p>acabei de testar, se a mel refletir a ult da briar<br>
+        <h4 class="nome-completo">kirer</h4>
+        <h6 class="username">@kirerlol · <span class="data-tzeet">9 de jan</span></h6>
+        <p class="conteudo-tzeet">acabei de testar, se a mel refletir a ult da briar<br>
             a mel vai correndo pra cima da briar<br>
             (mas não fica em frenesi)</p>
 
-        <!-- Links de Interação -->
-        <p>
-            <a href="#"><i class="fa-regular fa-comment"></i></a> <!-- Ícone de Responder -->
-            <a href="#"><i class="fa-solid fa-retweet"></i></a> <!-- Ícone de Repost -->
-            <a href="#"><i class="fa-regular fa-heart"></i></a> <!-- Ícone de Curtir -->
-            <a href="#"><i class="fa-solid fa-chart-bar"></i></a> <!-- Ícone de Estatísticas -->
-            <a href="#"><i class="fa-regular fa-bookmark"></i></a> <!-- Ícone de Salvar -->
-            <a href="#"><i class="fa-solid fa-arrow-up-from-bracket"></i></a> <!-- Ícone de Compartilhar -->
+        <p class="acoes">
+            <a href="#" class="reply"><i class="fa-regular fa-comment"></i></a>
+            <a href="#" class="retweet"><i class="fa-solid fa-retweet"></i></a>
+            <a href="#" class="like"><i class="fa-regular fa-heart"></i></a>
+            <a href="#" class="stats"><i class="fa-solid fa-chart-bar"></i></a>
+            <a href="#" class="save"><i class="fa-regular fa-bookmark"></i></a>
+            <a href="#" class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
         </p>
     </article>
 </body>
